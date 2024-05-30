@@ -11,8 +11,8 @@ jobs:
           path: demo
       - name: Run script from repo
         run: |
-          ls
+          ls -lrt
           pwd
-          sh ./test.sh
+          sh demo/test.sh
         shell: bash
 
