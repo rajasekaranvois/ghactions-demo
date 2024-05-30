@@ -11,8 +11,9 @@ jobs:
           path: demo
       - name: Run script from repo
         run: |
-          ls -lrt
-          pwd
-          sh demo/test.sh
+          echo ${{ github.workspace }}
+          echo $GITHUB_WORKSPACE
+          cd demo && ls -lrt
+          sh test.sh
         shell: bash
 
