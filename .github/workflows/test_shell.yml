@@ -5,7 +5,8 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - run: echo "This job automatically trigerred by a ${{ github.event.name }} event."
-
+      - name: Checkout repo
+        uses: actions/checkout@demo
       - name: Run script from repo
         run: |
           ls
