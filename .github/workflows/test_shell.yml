@@ -6,7 +6,7 @@ jobs:
     steps:
       - run: echo "This job automatically trigerred by a ${{ github.event.name }} event."
       - name: Checkout repo
-        uses: actions/checkout@demo
+        uses: actions/checkout@v2
       - name: Run script from repo
         run: |
           ls
