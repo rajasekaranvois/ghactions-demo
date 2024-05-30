@@ -7,6 +7,9 @@ jobs:
       - run: echo "This job automatically trigerred by a ${{ github.event.name }} event."
 
       - name: Run script from repo
-        run: sh ./test.sh
+        run: |
+          ls
+          pwd
+          sh ./test.sh
         shell: bash
 
