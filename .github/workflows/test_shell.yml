@@ -12,6 +12,8 @@ jobs:
       - name: Run script from repo
         run: |
           echo $GITHUB_WORKSPACE
-          cd $GITHUB_WORKSPACE && sh test.sh
+          cd $GITHUB_WORKSPACE
+          ls -lrt
+          sh test.sh
         shell: bash
 
