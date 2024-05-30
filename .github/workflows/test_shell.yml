@@ -2,11 +2,15 @@ on: [push]
 
 jobs:
   my_first_workflow:
-    runs_on: ubuntu-latest
+    runs-on: ubuntu-latest
     steps:
       - run: echo "This job automatically trigerred by a ${{ github.event.name }} event."
-
+      - name: Checkout repo
+        uses: actions/checkout@v2
+        with:
+          path: demo
       - name: Run script from repo
-        run: sh ./test.sh
+        run: |
+          cd $GITHUB_WORKSPACE && sh ./test.sh
         shell: bash
 
